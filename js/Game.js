@@ -59,8 +59,7 @@ class Game {
 
   gameOver(winOrLose) {
     const startOverlay = document.getElementById("overlay");
-    startOverlay.classList.remove('start');
-    startOverlay.classList.add(winOrLose);
+    startOverlay.className = winOrLose;
     document.getElementById("game-over-message").textContent = winOrLose == 'win' ? "You Won!" : "You Lost!";
     startOverlay.style.display = "flex";
 
