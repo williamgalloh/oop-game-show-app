@@ -30,8 +30,7 @@ class Game {
     this.activePhrase.addPhraseToDisplay();
   }  
 
-  handleInteraction(e) {
-    let buttonPressed = e.target;
+  handleInteraction(buttonPressed) {
     let letter = buttonPressed.textContent;
 
     // Disable letter on keyboard
