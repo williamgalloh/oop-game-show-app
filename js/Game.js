@@ -38,7 +38,7 @@ class Game {
     // Disable letter on keyboard
     buttonPressed.setAttribute('disabled', true);
 
-    // Add wrong class if letter does not match
+    // Add wrong class if letter does not match, or chosen if it does match
     if(!this.activePhrase.checkLetter(letter)) {
       buttonPressed.classList.add('wrong');
       this.removeLife();
@@ -55,15 +55,18 @@ class Game {
   }
 
   checkForWin() {
+    // Check if any of the letters are still hidden
     return document.querySelectorAll("#phrase .letter.hide").length === 0;
   }
 
   gameOver(winOrLose) {
+    // Update the start screen overlay depending if the user won/lost
     const startOverlay = document.getElementById("overlay");
     startOverlay.className = winOrLose;
     document.getElementById("game-over-message").textContent = winOrLose == 'win' ? "You Won!" : "You Lost!";
     startOverlay.style.display = "flex";
 
+    // Show confetti animation if user won
     if(winOrLose === "win") {
       let lottie = document.querySelector('.success-lottie');
       lottie.style.display = "block";
