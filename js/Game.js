@@ -10,7 +10,9 @@ class Game {
     this.phrases = [
       new Phrase('Treehouse rocks'),
       new Phrase('Javascript is easy'),
-      new Phrase('I want to be a developer')
+      new Phrase('I want to be a developer'),
+      new Phrase('To infinity and beyond'),
+      new Phrase('Welcome to the space jam')
     ];
     this.activePhrase = null;
   }
