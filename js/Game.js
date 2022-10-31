@@ -67,10 +67,13 @@ class Game {
     startOverlay.style.display = "flex";
 
     // Show confetti animation if user won
-    if(winOrLose === "win") {
-      let lottie = document.querySelector('.success-lottie');
+    let lottie = document.querySelector('.success-lottie');
+    if(winOrLose === "win") {     
       lottie.style.display = "block";
       lottie.play();
+    } else {
+      lottie.style.display = "none";
+      lottie.stop();
     }
 
     // Reset keyboard and scoreboard
