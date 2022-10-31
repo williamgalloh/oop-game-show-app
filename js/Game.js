@@ -62,6 +62,12 @@ class Game {
     document.getElementById("game-over-message").textContent = winOrLose == 'win' ? "You Won!" : "You Lost!";
     startOverlay.style.display = "flex";
 
+    if(winOrLose === "win") {
+      let lottie = document.querySelector('.success-lottie');
+      lottie.style.display = "block";
+      lottie.play();
+    }
+
     // Reset keyboard and scoreboard
     let keys = document.querySelectorAll("#qwerty .key");
     for (let key of keys) {
@@ -73,7 +79,7 @@ class Game {
     this.missed = 0;
     let lives = document.querySelectorAll("#scoreboard .tries img");
     for (let life of lives) {
-      life.setAttribute('src', 'images/liveHeart.png');
+      life.setAttribute('src', 'images/life-icon.png');
     }
 
   }
@@ -81,7 +87,7 @@ class Game {
   removeLife() {
     this.missed++;
     let heartImg = document.querySelector("#scoreboard .tries:nth-child(" + this.missed + ") img");
-    heartImg.setAttribute('src', 'images/lostHeart.png');
+    heartImg.setAttribute('src', 'images/explosion-icon.png');
   }
 
 }

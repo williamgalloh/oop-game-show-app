@@ -1,5 +1,5 @@
 /* Main styles */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:wght@900');
 
 /* Variables */
 
@@ -8,7 +8,7 @@
   --color-lose: #D94545;
   --color-start: #5b85b7;
   --color-neutral: #445069;
-  --color-neutral-light: #D2D2D2;
+  --color-neutral-light: #fff;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
   --font-size-large: 60px;
@@ -20,7 +20,8 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
 }
 
 body {
@@ -28,6 +29,8 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-color: #3a3f58;
+  background-image: url(../images/background.jpeg);
 }
 
 li, ol, ul {
@@ -86,7 +89,7 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #fff;
 }
 
 
@@ -101,6 +104,9 @@ button {
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .space {
@@ -118,8 +124,8 @@ button {
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   border-radius: 5px;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
+  transform: rotateY( 360deg );
+  transition: transform 0.5s;
 }
 
 
@@ -173,6 +179,7 @@ button {
   left: 0;
   right: 0;
   border-radius: 5px;
+  z-index: 1;
 }
 
 .title {
@@ -181,6 +188,7 @@ button {
 
 .start {
   background-color: #3a3f58;
+  background-image: url(../images/background.jpeg);
 }
 
 .start a {
@@ -201,4 +209,13 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+lottie-player {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -400px;
+    display: none;
+    z-index: -1;
 }
