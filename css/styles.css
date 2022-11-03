@@ -1,5 +1,5 @@
 /* Main styles */
-@import url('https://fonts.googleapis.com/css?family=Orbitron:wght@900');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;500;700&display=swap');
 
 /* Variables */
 
@@ -12,7 +12,7 @@
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
   --font-size-large: 60px;
-  --font-size-medium: 20px;
+  --font-size-medium: 30px;
   --transition: all .2s ease-in-out;
 }
 
@@ -20,7 +20,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 900;
 }
 
@@ -30,7 +30,9 @@ body {
   display: flex;
   height: 100vh;
   background-color: #3a3f58;
-  background-image: url(../images/background.jpeg);
+  background-image: url(../images/background4.jpeg);
+  background-position: center center;
+  background-size: cover;
 }
 
 li, ol, ul {
@@ -66,6 +68,10 @@ button {
 #btn__reset {
 	width: 200px;
 	margin: 0 auto;
+  background: #448ec5;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .main-container {
@@ -99,7 +105,7 @@ button {
   font-size: var(--font-size-medium);
   height: 65px;
   width: 65px;
-  padding: 20px 1px 0 1px;
+  padding: 17px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);
@@ -118,10 +124,10 @@ button {
 .show {
   color: #fff;
   background-color: #4ac0d5;
-  font-size: 20px;
+  font-size: 30px;
   height: 65px;
   width: 65px;
-  padding: 20px 1px 0 1px;
+  padding: 17px 1px 0 1px;
   margin-right: 2px;
   border-radius: 5px;
   transform: rotateY( 360deg );
@@ -151,12 +157,10 @@ button {
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #f7a964;
   border-radius: 5px;
-  font-size: 20px;
   cursor: pointer;
   border-bottom: solid 4px rgba(0, 0, 0, .3);
-  border-right: solid 3px rgba(0, 0, 0, .3)
+  border-right: solid 3px rgba(0, 0, 0, .3);
 }
 
 .btn__reset:active {
@@ -184,11 +188,14 @@ button {
 
 .title {
   color: #FFF;
+  font-size: 130px;
 }
 
 .start {
   background-color: #3a3f58;
-  background-image: url(../images/background.jpeg);
+  background-image: url(../images/background3.jpeg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .start a {
